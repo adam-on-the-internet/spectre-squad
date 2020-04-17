@@ -41,6 +41,10 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.Decks);
   }
 
+  public goDeckListing(): void {
+    this.goToRoute(ROUTES_ENUM.DeckListing);
+  }
+
   public goBookmarks(): void {
     this.goToRoute(ROUTES_ENUM.Bookmarks);
   }

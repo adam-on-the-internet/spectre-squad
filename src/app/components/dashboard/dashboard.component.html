@@ -4,7 +4,7 @@
 ></app-header>
 <app-body>
   <div class="row">
-    <div class="col-md-6 my-3">
+    <div class="col-md-4 my-3">
       <app-card [title]="'Virtual Cards'">
         <p>
           Virtual card decks for the game.
@@ -14,12 +14,22 @@
         </button>
       </app-card>
     </div>
-    <div class="col-md-6 my-3">
+    <div class="col-md-4 my-3">
       <app-card [title]="'Rules'">
         <p>
           Rules for the game.
         </p>
         <button class="btn btn-secondary" (click)="goRules()">
+          Go
+        </button>
+      </app-card>
+    </div>
+    <div class="col-md-4 my-3">
+      <app-card [title]="'Full Deck Listing'">
+        <p>
+          View all of the cards.
+        </p>
+        <button class="btn btn-secondary" (click)="goDeckListing()">
           Go
         </button>
       </app-card>

@@ -12,6 +12,7 @@ import { BookmarkDetailsComponent } from "./components/bookmark-details/bookmark
 import { BookmarksComponent } from "./components/bookmarks/bookmarks.component";
 import { RulesComponent } from "./components/rules/rules.component";
 import { DecksComponent } from "./components/decks/decks.component";
+import { DeckListingComponent } from './components/deck-listing/deck-listing.component';
 
 const routes: Routes = [
   // main
@@ -23,6 +24,7 @@ const routes: Routes = [
   // projects
   { path: ROUTES_ENUM.Rules, component: RulesComponent },
   { path: ROUTES_ENUM.Decks, component: DecksComponent },
+  { path: ROUTES_ENUM.DeckListing, component: DeckListingComponent },
   { path: ROUTES_ENUM.Bookmarks, component: BookmarksComponent },
   { path: ROUTES_ENUM.BookmarkOverview, component: BookmarkOverviewComponent },
   { path: ROUTES_ENUM.BookmarkOverview + "/:id", component: BookmarkDetailsComponent },

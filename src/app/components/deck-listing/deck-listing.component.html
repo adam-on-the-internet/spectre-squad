@@ -1,0 +1,16 @@
+<app-header [title]="'Game Rules'"></app-header>
+<app-body>
+  <div class="row">
+    <div class="col-md-12 my-3" *ngIf="ready; else loading">
+      <app-card [autoHeight]="false">
+        {{ cards | json }}
+      </app-card>
+    </div>
+  </div>
+</app-body>
+
+<ng-template #loading>
+  <div class="col-md-12 my-3">
+    <app-loading></app-loading>
+  </div>
+</ng-template>

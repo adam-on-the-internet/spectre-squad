@@ -25,6 +25,7 @@ import { BookmarkTableComponent } from "./components/bookmark-table/bookmark-tab
 import { BookmarksComponent } from "./components/bookmarks/bookmarks.component";
 import { RulesComponent } from "./components/rules/rules.component";
 import { DecksComponent } from "./components/decks/decks.component";
+import { DeckListingComponent } from './components/deck-listing/deck-listing.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { DecksComponent } from "./components/decks/decks.component";
     BookmarksComponent,
     RulesComponent,
     DecksComponent,
+    DeckListingComponent,
   ],
   imports: [
     BrowserModule,

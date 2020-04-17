@@ -3,6 +3,7 @@ export const enum ROUTES_ENUM {
   Info = "info",
   Rules = "rules",
   Decks = "decks",
+  DeckListing = "deck-listing",
   Bookmarks = "bookmarks",
   BookmarkOverview = "bookmark-overview",
   BookmarkForm = "bookmark-form",

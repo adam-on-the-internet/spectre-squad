@@ -27,6 +27,10 @@ export class DashboardComponent {
     this.navHelper.goDecks();
   }
 
+  public goDeckListing() {
+    this.navHelper.goDeckListing();
+  }
+
   public goRules() {
     this.navHelper.goRules();
   }
