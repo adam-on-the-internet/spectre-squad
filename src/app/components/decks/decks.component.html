@@ -1,9 +1,109 @@
 <app-header [title]="'Virtual Card Decks'"></app-header>
 <app-body>
   <div class="row">
-    <div class="col-md-12 my-3">
-      <app-card [autoHeight]="false">
-        <p>Coming soon...</p>
+    <div class="col-md-6 my-3">
+      <app-card [autoHeight]="false" [title]="'Think Together'">
+        <p>
+          Traps:
+        </p>
+        <p>
+          <button class="btn btn-secondary">Think Together</button>
+          <button class="btn btn-secondary">Orders</button>
+          <button class="btn btn-secondary">Anagrams</button>
+        </p>
+        <hr />
+        <p>
+          Encounters:
+        </p>
+        <p>
+          <button class="btn btn-secondary">Hunter</button>
+          <button class="btn btn-secondary">Generator</button>
+        </p>
+      </app-card>
+    </div>
+    <div class="col-md-6 my-3">
+      <app-card [autoHeight]="false" [title]="'Think Together'">
+        <p>
+          Two Spectres each create a list of items for a topic.
+        </p>
+        <ul>
+          <li>
+            Level 1: ?
+          </li>
+          <li>
+            Level 2: ?
+          </li>
+          <li>
+            Level 3: ?
+          </li>
+        </ul>
+        <hr />
+        <h3>VALUE HERE</h3>
+      </app-card>
+    </div>
+    <div class="col-md-6 my-3">
+      <app-card [autoHeight]="false" [title]="'Orders'">
+        <p>
+          Spectre draws, acts, or impersonates one of the choices.
+        </p>
+        <ul>
+          <li>
+            Level 1: ?
+          </li>
+          <li>
+            Level 2: ?
+          </li>
+          <li>
+            Level 3: ?
+          </li>
+        </ul>
+        <hr />
+        <h3>1. VALUE HERE</h3>
+        <h3>2. VALUE HERE</h3>
+        <h3>3. VALUE HERE</h3>
+      </app-card>
+    </div>
+    <div class="col-md-6 my-3">
+      <app-card [autoHeight]="false" [title]="'Anagrams'">
+        <p>
+          One Spectre writes down as many words as possible using the given
+          letters.
+        </p>
+        <ul>
+          <li>
+            Level 1: ?
+          </li>
+          <li>
+            Level 2: ?
+          </li>
+          <li>
+            Level 3: ?
+          </li>
+        </ul>
+        <hr />
+        <h3>VALUE HERE</h3>
+      </app-card>
+    </div>
+    <div class="col-md-6 my-3">
+      <app-card [autoHeight]="false" [title]="'Hunter Encounter: Segue'">
+        <p>
+          The active player selects the word or phrase from the two options. The
+          Spectre and Boss take turns saying words or phrases related to the
+          previous word or phrase.
+        </p>
+        <hr />
+        <h3>1. VALUE HERE</h3>
+        <h3>2. VALUE HERE</h3>
+      </app-card>
+    </div>
+    <div class="col-md-6 my-3">
+      <app-card [autoHeight]="false" [title]="'Generator Encounter: Showdown'">
+        <p>
+          The Spectre and Boss both create lists for a topic. Whoever writes the most words in 30 seconds wins. The Boss chooses the topic.
+        </p>
+        <hr />
+        <h3>1. VALUE HERE</h3>
+        <h3>2. VALUE HERE</h3>
       </app-card>
     </div>
   </div>
