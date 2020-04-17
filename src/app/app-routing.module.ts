@@ -10,8 +10,8 @@ import { BookmarkOverviewComponent } from "./components/bookmark-overview/bookma
 import { BookmarkFormComponent } from "./components/bookmark-form/bookmark-form.component";
 import { BookmarkDetailsComponent } from "./components/bookmark-details/bookmark-details.component";
 import { BookmarksComponent } from "./components/bookmarks/bookmarks.component";
-import { RulesComponent } from './components/rules/rules.component';
-import { DecksComponent } from './components/decks/decks.component';
+import { RulesComponent } from "./components/rules/rules.component";
+import { DecksComponent } from "./components/decks/decks.component";
 
 const routes: Routes = [
   // main

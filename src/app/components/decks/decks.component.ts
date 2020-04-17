@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-decks',
-  templateUrl: './decks.component.html',
-  styleUrls: ['./decks.component.scss']
+  selector: "app-decks",
+  templateUrl: "./decks.component.html",
+  styleUrls: ["./decks.component.scss"]
 })
 export class DecksComponent implements OnInit {
 
