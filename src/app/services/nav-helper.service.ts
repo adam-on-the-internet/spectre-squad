@@ -33,6 +33,14 @@ export class NavHelperService {
 
   // PROJECTS
 
+  public goRules(): void {
+    this.goToRoute(ROUTES_ENUM.Rules);
+  }
+
+  public goDecks(): void {
+    this.goToRoute(ROUTES_ENUM.Decks);
+  }
+
   public goBookmarks(): void {
     this.goToRoute(ROUTES_ENUM.Bookmarks);
   }

@@ -23,8 +23,12 @@ export class DashboardComponent {
     this.navHelper.goToInfo();
   }
 
-  public goBookmarks() {
-    this.navHelper.goBookmarks();
+  public goDecks() {
+    this.navHelper.goDecks();
+  }
+
+  public goRules() {
+    this.navHelper.goRules();
   }
 
 }

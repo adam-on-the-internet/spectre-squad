@@ -33,6 +33,14 @@ export class NavbarComponent {
     this.navHelper.goToDashboard();
   }
 
+  public goDecks(): void {
+    this.navHelper.goDecks();
+  }
+
+  public goRules(): void {
+    this.navHelper.goRules();
+  }
+
   public goToProfile(): void {
     this.navHelper.goToProfile();
   }
