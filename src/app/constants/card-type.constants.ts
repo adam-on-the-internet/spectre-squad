@@ -1,4 +1,4 @@
-import { GeneralOption } from '../models/GeneralOption.model';
+import { GeneralOption } from "../models/GeneralOption.model";
 
 // DECK TYPES
 export const TRAP_DECK_TYPE: GeneralOption = {

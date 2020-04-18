@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { CardService } from 'src/app/services/card.service';
-import { Card } from 'src/app/models/Card.model';
-import { BooleanHelper } from 'src/app/utilities/boolean.util';
+import { Component, OnInit } from "@angular/core";
+import { CardService } from "src/app/services/card.service";
+import { Card } from "src/app/models/Card.model";
+import { BooleanHelper } from "src/app/utilities/boolean.util";
 
 @Component({
-  selector: 'app-deck-listing',
-  templateUrl: './deck-listing.component.html',
-  styleUrls: ['./deck-listing.component.scss']
+  selector: "app-deck-listing",
+  templateUrl: "./deck-listing.component.html",
+  styleUrls: ["./deck-listing.component.scss"]
 })
 export class DeckListingComponent implements OnInit {
   public cards: Card[] = null;

@@ -1,19 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { Card } from 'src/app/models/Card.model';
-import { BooleanHelper } from 'src/app/utilities/boolean.util';
-import { ActivatedRoute } from '@angular/router';
-import { CardService } from 'src/app/services/card.service';
-import { NavHelperService } from 'src/app/services/nav-helper.service';
-import { GeneralOption } from 'src/app/models/GeneralOption.model';
+import { Component, OnInit } from "@angular/core";
+import { Card } from "src/app/models/Card.model";
+import { BooleanHelper } from "src/app/utilities/boolean.util";
+import { ActivatedRoute } from "@angular/router";
+import { CardService } from "src/app/services/card.service";
+import { NavHelperService } from "src/app/services/nav-helper.service";
+import { GeneralOption } from "src/app/models/GeneralOption.model";
 import {
   TRAP_DECK_TYPE, ENCOUNTER_DECK_TYPE, TRAP_CARD_TYPES, ENCOUNTER_CARD_TYPES,
   ORDER_CARD_SUBTYPES
-} from 'src/app/constants/card-type.constants';
+} from "src/app/constants/card-type.constants";
 
 @Component({
-  selector: 'app-card-form',
-  templateUrl: './card-form.component.html',
-  styleUrls: ['./card-form.component.scss']
+  selector: "app-card-form",
+  templateUrl: "./card-form.component.html",
+  styleUrls: ["./card-form.component.scss"]
 })
 export class CardFormComponent implements OnInit {
   public card: Card = null;

@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { Card } from 'src/app/models/Card.model';
-import { BooleanHelper } from 'src/app/utilities/boolean.util';
-import { CardService } from 'src/app/services/card.service';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Card } from "src/app/models/Card.model";
+import { BooleanHelper } from "src/app/utilities/boolean.util";
+import { CardService } from "src/app/services/card.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-card-details',
-  templateUrl: './card-details.component.html',
-  styleUrls: ['./card-details.component.scss']
+  selector: "app-card-details",
+  templateUrl: "./card-details.component.html",
+  styleUrls: ["./card-details.component.scss"]
 })
 export class CardDetailsComponent implements OnInit {
   public card: Card = null;

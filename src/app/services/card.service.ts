@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Card } from '../models/Card.model';
-import { CookieHelper } from '../utilities/cookie.util';
-import { ServiceUrl } from '../constants/rest.constants';
-import { RestUrlBuilder } from '../utilities/rest-url-builder.util';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { Card } from "../models/Card.model";
+import { CookieHelper } from "../utilities/cookie.util";
+import { ServiceUrl } from "../constants/rest.constants";
+import { RestUrlBuilder } from "../utilities/rest-url-builder.util";
 
 const controller = "spectreCard";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class CardService {
   constructor(

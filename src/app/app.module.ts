@@ -18,18 +18,13 @@ import { BodyComponent } from "./components/body/body.component";
 import { LoadingComponent } from "./components/loading/loading.component";
 import { CardComponent } from "./components/card/card.component";
 import { BodyAltComponent } from "./components/body-alt/body-alt.component";
-import { BookmarkDetailsComponent } from "./components/bookmark-details/bookmark-details.component";
-import { BookmarkFormComponent } from "./components/bookmark-form/bookmark-form.component";
-import { BookmarkOverviewComponent } from "./components/bookmark-overview/bookmark-overview.component";
-import { BookmarkTableComponent } from "./components/bookmark-table/bookmark-table.component";
-import { BookmarksComponent } from "./components/bookmarks/bookmarks.component";
 import { RulesComponent } from "./components/rules/rules.component";
 import { DecksComponent } from "./components/decks/decks.component";
-import { DeckListingComponent } from './components/deck-listing/deck-listing.component';
-import { CardTableComponent } from './components/card-table/card-table.component';
-import { CardOverviewComponent } from './components/card-overview/card-overview.component';
-import { CardFormComponent } from './components/card-form/card-form.component';
-import { CardDetailsComponent } from './components/card-details/card-details.component';
+import { DeckListingComponent } from "./components/deck-listing/deck-listing.component";
+import { CardTableComponent } from "./components/card-table/card-table.component";
+import { CardOverviewComponent } from "./components/card-overview/card-overview.component";
+import { CardFormComponent } from "./components/card-form/card-form.component";
+import { CardDetailsComponent } from "./components/card-details/card-details.component";
 
 @NgModule({
   declarations: [
@@ -47,11 +42,6 @@ import { CardDetailsComponent } from './components/card-details/card-details.com
     LoadingComponent,
     CardComponent,
     BodyAltComponent,
-    BookmarkDetailsComponent,
-    BookmarkFormComponent,
-    BookmarkOverviewComponent,
-    BookmarkTableComponent,
-    BookmarksComponent,
     RulesComponent,
     DecksComponent,
     DeckListingComponent,

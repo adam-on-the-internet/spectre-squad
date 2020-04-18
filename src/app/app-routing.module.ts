@@ -6,16 +6,12 @@ import { ROUTES_ENUM } from "./constants/routing.constants";
 import { LoginComponent } from "./components/login/login.component";
 import { ProfileComponent } from "./components/profile/profile.component";
 import { AdminComponent } from "./components/admin/admin.component";
-import { BookmarkOverviewComponent } from "./components/bookmark-overview/bookmark-overview.component";
-import { BookmarkFormComponent } from "./components/bookmark-form/bookmark-form.component";
-import { BookmarkDetailsComponent } from "./components/bookmark-details/bookmark-details.component";
-import { BookmarksComponent } from "./components/bookmarks/bookmarks.component";
 import { RulesComponent } from "./components/rules/rules.component";
 import { DecksComponent } from "./components/decks/decks.component";
-import { DeckListingComponent } from './components/deck-listing/deck-listing.component';
-import { CardOverviewComponent } from './components/card-overview/card-overview.component';
-import { CardDetailsComponent } from './components/card-details/card-details.component';
-import { CardFormComponent } from './components/card-form/card-form.component';
+import { DeckListingComponent } from "./components/deck-listing/deck-listing.component";
+import { CardOverviewComponent } from "./components/card-overview/card-overview.component";
+import { CardDetailsComponent } from "./components/card-details/card-details.component";
+import { CardFormComponent } from "./components/card-form/card-form.component";
 
 const routes: Routes = [
   // main
@@ -28,12 +24,6 @@ const routes: Routes = [
   { path: ROUTES_ENUM.Rules, component: RulesComponent },
   { path: ROUTES_ENUM.Decks, component: DecksComponent },
   { path: ROUTES_ENUM.DeckListing, component: DeckListingComponent },
-  // bookmark
-  { path: ROUTES_ENUM.Bookmarks, component: BookmarksComponent },
-  { path: ROUTES_ENUM.BookmarkOverview, component: BookmarkOverviewComponent },
-  { path: ROUTES_ENUM.BookmarkOverview + "/:id", component: BookmarkDetailsComponent },
-  { path: ROUTES_ENUM.BookmarkForm, component: BookmarkFormComponent },
-  { path: ROUTES_ENUM.BookmarkForm + "/:id", component: BookmarkFormComponent },
   // card
   { path: ROUTES_ENUM.CardOverview, component: CardOverviewComponent },
   { path: ROUTES_ENUM.CardOverview + "/:id", component: CardDetailsComponent },

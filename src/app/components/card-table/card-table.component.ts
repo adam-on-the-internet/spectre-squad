@@ -1,13 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Card } from 'src/app/models/Card.model';
-import { CookieHelper } from 'src/app/utilities/cookie.util';
-import { CardService } from 'src/app/services/card.service';
-import { NavHelperService } from 'src/app/services/nav-helper.service';
+import { Component, OnInit, Input } from "@angular/core";
+import { Card } from "src/app/models/Card.model";
+import { CookieHelper } from "src/app/utilities/cookie.util";
+import { CardService } from "src/app/services/card.service";
+import { NavHelperService } from "src/app/services/nav-helper.service";
 
 @Component({
-  selector: 'app-card-table',
-  templateUrl: './card-table.component.html',
-  styleUrls: ['./card-table.component.scss']
+  selector: "app-card-table",
+  templateUrl: "./card-table.component.html",
+  styleUrls: ["./card-table.component.scss"]
 })
 export class CardTableComponent implements OnInit {
   @Input() public management = true;

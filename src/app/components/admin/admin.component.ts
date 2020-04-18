@@ -14,10 +14,6 @@ export class AdminComponent {
     private navHelper: NavHelperService,
   ) { }
 
-  public goBookmarkOverview() {
-    this.navHelper.goBookmarkOverview();
-  }
-
   public goCardOverview() {
     this.navHelper.goCardOverview();
   }

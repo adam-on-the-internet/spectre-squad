@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { DecksComponent } from "./decks.component";
+import { HeaderComponent } from "../header/header.component";
+import { BodyComponent } from "../body/body.component";
+import { CardComponent } from "../card/card.component";
 
 describe("DecksComponent", () => {
   let component: DecksComponent;
@@ -8,9 +11,10 @@ describe("DecksComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DecksComponent ]
+      declarations: [DecksComponent, HeaderComponent, BodyComponent, CardComponent],
+      imports: []
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
