@@ -53,8 +53,16 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.BookmarkOverview);
   }
 
+  public goCardOverview(): void {
+    this.goToRoute(ROUTES_ENUM.CardOverview);
+  }
+
   public goToBookmarkDetails(id: string): void {
     this.goToRoutes([ROUTES_ENUM.BookmarkOverview, id]);
+  }
+
+  public goToCardDetails(id: string): void {
+    this.goToRoutes([ROUTES_ENUM.CardOverview, id]);
   }
 
   public goToBookmarkCreateForm(): void {

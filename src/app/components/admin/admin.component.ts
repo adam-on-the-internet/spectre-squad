@@ -18,4 +18,8 @@ export class AdminComponent {
     this.navHelper.goBookmarkOverview();
   }
 
+  public goCardOverview() {
+    this.navHelper.goCardOverview();
+  }
+
 }

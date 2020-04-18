@@ -26,6 +26,10 @@ import { BookmarksComponent } from "./components/bookmarks/bookmarks.component";
 import { RulesComponent } from "./components/rules/rules.component";
 import { DecksComponent } from "./components/decks/decks.component";
 import { DeckListingComponent } from './components/deck-listing/deck-listing.component';
+import { CardTableComponent } from './components/card-table/card-table.component';
+import { CardOverviewComponent } from './components/card-overview/card-overview.component';
+import { CardFormComponent } from './components/card-form/card-form.component';
+import { CardDetailsComponent } from './components/card-details/card-details.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +55,10 @@ import { DeckListingComponent } from './components/deck-listing/deck-listing.com
     RulesComponent,
     DecksComponent,
     DeckListingComponent,
+    CardTableComponent,
+    CardOverviewComponent,
+    CardFormComponent,
+    CardDetailsComponent,
   ],
   imports: [
     BrowserModule,
