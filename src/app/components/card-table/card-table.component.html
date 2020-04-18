@@ -1,1 +1,77 @@
-<p>card-table works!</p>
+<div class="row">
+  <div class="col-md-12 my-3">
+    <app-card [autoHeight]="false" *ngIf="ready; else notReady">
+      <button class="btn btn-secondary" (click)="goCreate()" *ngIf="canEdit">
+        Create Card
+      </button>
+      <ng-container *ngIf="!hasCard">
+        <p>No cards available.</p>
+      </ng-container>
+      <ng-container *ngIf="hasCard">
+        <p>
+          <small>Showing {{ cards.length }} card(s)</small>
+        </p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <ng-container *ngIf="!canEdit">
+                <th>Type</th>
+                <th>Go</th>
+              </ng-container>
+              <ng-container *ngIf="canEdit">
+                <th>Details</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </ng-container>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let card of cards">
+              <td>{{ card._id }}</td>
+              <ng-container *ngIf="!canEdit">
+                <td>{{ card.type }}</td>
+                <td>
+                  <a
+                    [href]="card.url"
+                    target="_blank"
+                    class="btn btn-primary"
+                    >Go</a
+                  >
+                </td>
+              </ng-container>
+              <ng-container *ngIf="canEdit">
+                <td>
+                  <button
+                    class="btn btn-secondary"
+                    (click)="goDetails(card)"
+                  >
+                    Details
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-secondary" (click)="goEdit(card)">
+                    Edit
+                  </button>
+                </td>
+                <td>
+                  <button
+                    class="btn btn-secondary"
+                    (click)="requestDelete(card)"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </ng-container>
+            </tr>
+          </tbody>
+        </table>
+      </ng-container>
+    </app-card>
+  </div>
+</div>
+
+<ng-template #notReady>
+  <p *ngIf="error">Error occured :(</p>
+  <app-loading *ngIf="!error"></app-loading>
+</ng-template>

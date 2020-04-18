@@ -73,6 +73,14 @@ export class NavHelperService {
     this.goToRoutes([ROUTES_ENUM.BookmarkForm, id]);
   }
 
+  public goToCardCreateForm(): void {
+    this.goToRoute(ROUTES_ENUM.CardForm);
+  }
+
+  public goToCardEditForm(id: string): void {
+    this.goToRoutes([ROUTES_ENUM.CardForm, id]);
+  }
+
   // GENERAL
 
   private goToRoute(route: string): void {
