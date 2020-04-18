@@ -103,7 +103,7 @@ export class CardFormComponent implements OnInit {
   private get showHowManyOptions(): number {
     if (this.cardIsHunter || this.cardIsGenerator) {
       return 2;
-    } else if (this.cardIsOrders || this.cardIsThink) {
+    } else if (this.cardIsOrders) {
       return 3;
     } else {
       return 1;
