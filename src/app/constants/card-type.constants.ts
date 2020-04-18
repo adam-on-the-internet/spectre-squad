@@ -16,8 +16,8 @@ export const ORDER_CARD_TYPE: GeneralOption = {
   value: "ORDERS",
 };
 export const ANAGRAM_CARD_TYPE: GeneralOption = {
-  name: "Anagram",
-  value: "ANAGRAM",
+  name: "Anagrams",
+  value: "ANAGRAMS",
 };
 export const THINK_CARD_TYPE: GeneralOption = {
   name: "Think Together",
