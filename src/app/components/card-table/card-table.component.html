@@ -14,11 +14,7 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>Name</th>
-              <ng-container *ngIf="!canEdit">
-                <th>Type</th>
-                <th>Go</th>
-              </ng-container>
+              <th>Card</th>
               <ng-container *ngIf="canEdit">
                 <th>Details</th>
                 <th>Edit</th>
@@ -28,24 +24,10 @@
           </thead>
           <tbody>
             <tr *ngFor="let card of cards">
-              <td>{{ card._id }}</td>
-              <ng-container *ngIf="!canEdit">
-                <td>{{ card.type }}</td>
-                <td>
-                  <a
-                    [href]="card.url"
-                    target="_blank"
-                    class="btn btn-primary"
-                    >Go</a
-                  >
-                </td>
-              </ng-container>
+              <td>{{ buildCardDescription(card) }}</td>
               <ng-container *ngIf="canEdit">
                 <td>
-                  <button
-                    class="btn btn-secondary"
-                    (click)="goDetails(card)"
-                  >
+                  <button class="btn btn-secondary" (click)="goDetails(card)">
                     Details
                   </button>
                 </td>

@@ -16,6 +16,24 @@ export class CardService {
     private http: HttpClient,
   ) { }
 
+  public static getCardDescription(card: Card): string {
+    const deckType = card.deckType;
+
+    let cardType = card.cardType;
+    if (card.cardType === "ORDER") {
+      cardType = cardType + " " + card.cardSubType;
+    }
+
+    let values = card.valueOne;
+    if (card.valueTwo) {
+      values = values + "," + card.valueTwo;
+    }
+    if (card.valueThree) {
+      values = values + "," + card.valueThree;
+    }
+    return `${deckType} | ${cardType} | ${values}`;
+  }
+
   public getAll(): Observable<Card[]> {
     const url = RestUrlBuilder.buildRestUrl({
       service: ServiceUrl.BasicExpress,

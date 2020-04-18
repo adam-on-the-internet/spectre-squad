@@ -55,6 +55,10 @@ export class CardTableComponent implements OnInit {
     }
   }
 
+  public buildCardDescription(card: Card): string {
+    return CardService.getCardDescription(card);
+  }
+
   private delete(card: Card): void {
     this.cardService.delete(card._id)
       .subscribe((res) => this.cards = res,
