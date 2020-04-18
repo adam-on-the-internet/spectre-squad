@@ -1,1 +1,119 @@
-<p>card-form works!</p>
+<ng-container *ngIf="ready; else notReady">
+  <app-header [title]="title"></app-header>
+  <app-body>
+    <div class="row">
+      <div class="col-md-12 my-3">
+        <app-card>
+          <form>
+            <div class="form-group">
+              <label for="deck-type">
+                <strong>
+                  1. Deck Type
+                </strong>
+              </label>
+              <select
+                id="deck-type"
+                name="deckType"
+                class="form-control"
+                [disabled]="readyForCardType"
+                [(ngModel)]="card.deckType"
+              >
+                <option
+                  [value]="option.value"
+                  *ngFor="let option of deckTypeOptions"
+                  >{{ option.name }}</option
+                >
+              </select>
+            </div>
+            <div class="form-group" *ngIf="readyForCardType">
+              <label for="card-type">
+                <strong>
+                  2. Card Type
+                </strong>
+              </label>
+              <select
+                id="card-type"
+                name="cardType"
+                class="form-control"
+                [disabled]="readyForCardSubType || readyForValues"
+                [(ngModel)]="card.cardType"
+              >
+                <option
+                  [value]="option.value"
+                  *ngFor="let option of cardTypeOptions"
+                  >{{ option.name }}</option
+                >
+              </select>
+            </div>
+            <div class="form-group" *ngIf="readyForCardSubType">
+              <label for="card-subtype">
+                <strong>
+                  2x. Card Sub Type
+                </strong>
+              </label>
+              <select
+                id="card-subtype"
+                name="cardSubType"
+                class="form-control"
+                [disabled]="readyForValues"
+                [(ngModel)]="card.cardSubType"
+              >
+                <option
+                  [value]="option.value"
+                  *ngFor="let option of cardSubTypeOptions"
+                  >{{ option.name }}</option
+                >
+              </select>
+            </div>
+            <div id="values" *ngIf="readyForValues">
+              <p>
+                <strong>3. Values:</strong>
+              </p>
+              <section>
+                <label for="value-one">Value One</label>
+                <br />
+                <input
+                  type="text"
+                  name="valueOne"
+                  [(ngModel)]="card.valueOne"
+                />
+              </section>
+              <section *ngIf="readyForValueTwo">
+                <br />
+                <label for="value-two">Value Two</label>
+                <br />
+                <input
+                  type="text"
+                  name="valueTwo"
+                  [(ngModel)]="card.valueTwo"
+                />
+              </section>
+              <section *ngIf="readyForValueThree">
+                <br />
+                <label for="value-three">Value Three</label>
+                <br />
+                <input
+                  type="text"
+                  name="valueThree"
+                  [(ngModel)]="card.valueThree"
+                />
+              </section>
+            </div>
+            <hr />
+            <button
+              class="btn btn-primary"
+              (click)="submit()"
+              *ngIf="readyForSubmit"
+            >
+              Save Card
+            </button>
+          </form>
+        </app-card>
+      </div>
+    </div>
+  </app-body>
+</ng-container>
+
+<ng-template #notReady>
+  <app-loading></app-loading>
+</ng-template>
