@@ -56,8 +56,8 @@ export class CardFormComponent implements OnInit {
 
   public get readyForSubmit(): boolean {
     const valueOneValid = this.readyForValues && BooleanHelper.hasValue(this.card.valueOne);
-    const valueTwoValid = this.readyForValueTwo && BooleanHelper.hasValue(this.card.valueTwo);
-    const valueThreeValid = this.readyForValueThree && BooleanHelper.hasValue(this.card.valueThree);
+    const valueTwoValid = !this.readyForValueTwo || BooleanHelper.hasValue(this.card.valueTwo);
+    const valueThreeValid = !this.readyForValueThree || BooleanHelper.hasValue(this.card.valueThree);
     return valueOneValid && valueTwoValid && valueThreeValid;
   }
 
