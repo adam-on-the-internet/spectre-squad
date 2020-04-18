@@ -1,1 +1,51 @@
-<p>card-details works!</p>
+<ng-container *ngIf="ready; else notReady">
+  <app-body>
+    <div class="row">
+      <div class="col-md-12 my-3">
+        <p>
+          <strong>
+            Deck Type:
+          </strong>
+          {{ card.deckType }}
+        </p>
+        <p>
+          <strong>
+            Card Type:
+          </strong>
+          {{ card.cardType }}
+        </p>
+        <p>
+          <strong>
+            Card Sub Type:
+          </strong>
+          {{ card.cardSubType }}
+        </p>
+        <p>
+          <strong>
+            Value One:
+          </strong>
+          {{ card.valueOne }}
+        </p>
+        <p>
+          <strong>
+            Value Two:
+          </strong>
+          {{ card.valueTwo }}
+        </p>
+        <p>
+          <strong>
+            Value Three:
+          </strong>
+          {{ card.valueThree }}
+        </p>
+        <p>
+          <small>{{ card._id }}</small>
+        </p>
+      </div>
+    </div>
+  </app-body>
+</ng-container>
+
+<ng-template #notReady>
+  <app-loading></app-loading>
+</ng-template>
