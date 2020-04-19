@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { CardService } from 'src/app/services/card.service';
-import { Decks } from 'src/app/models/Decks.model';
-import { BooleanHelper } from 'src/app/utilities/boolean.util';
-import { Card } from 'src/app/models/Card.model';
+import { CardService } from "src/app/services/card.service";
+import { Decks } from "src/app/models/Decks.model";
+import { BooleanHelper } from "src/app/utilities/boolean.util";
+import { Card } from "src/app/models/Card.model";
 
 @Component({
   selector: "app-decks",
