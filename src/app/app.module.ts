@@ -18,7 +18,6 @@ import { BodyComponent } from "./components/body/body.component";
 import { LoadingComponent } from "./components/loading/loading.component";
 import { CardComponent } from "./components/card/card.component";
 import { BodyAltComponent } from "./components/body-alt/body-alt.component";
-import { RulesComponent } from "./components/rules/rules.component";
 import { DecksComponent } from "./components/decks/decks.component";
 import { DeckListingComponent } from "./components/deck-listing/deck-listing.component";
 import { CardTableComponent } from "./components/card-table/card-table.component";
@@ -43,7 +42,6 @@ import { SpectreCardComponent } from "./components/spectre-card/spectre-card.com
     LoadingComponent,
     CardComponent,
     BodyAltComponent,
-    RulesComponent,
     DecksComponent,
     DeckListingComponent,
     CardTableComponent,

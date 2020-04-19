@@ -6,7 +6,6 @@ import { ROUTES_ENUM } from "./constants/routing.constants";
 import { LoginComponent } from "./components/login/login.component";
 import { ProfileComponent } from "./components/profile/profile.component";
 import { AdminComponent } from "./components/admin/admin.component";
-import { RulesComponent } from "./components/rules/rules.component";
 import { DecksComponent } from "./components/decks/decks.component";
 import { DeckListingComponent } from "./components/deck-listing/deck-listing.component";
 import { CardOverviewComponent } from "./components/card-overview/card-overview.component";
@@ -21,7 +20,6 @@ const routes: Routes = [
   { path: ROUTES_ENUM.Profile, component: ProfileComponent },
   { path: ROUTES_ENUM.Admin, component: AdminComponent },
   // projects
-  { path: ROUTES_ENUM.Rules, component: RulesComponent },
   { path: ROUTES_ENUM.Decks, component: DecksComponent },
   { path: ROUTES_ENUM.DeckListing, component: DeckListingComponent },
   // card

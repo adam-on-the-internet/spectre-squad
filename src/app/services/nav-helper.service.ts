@@ -34,7 +34,8 @@ export class NavHelperService {
   // PROJECTS
 
   public goRules(): void {
-    this.goToRoute(ROUTES_ENUM.Rules);
+    const rulesLink = "https://docs.google.com/document/d/1rWILo6vIsBPSrMO-pX8BTVFlJ5iHSGtHq7qkQiHoeJ0/edit?usp=sharing";
+    window.open(rulesLink, "_blank");
   }
 
   public goDecks(): void {
