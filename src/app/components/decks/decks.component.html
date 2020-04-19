@@ -1,25 +1,28 @@
 <app-header [title]="'Virtual Card Decks'"></app-header>
 <app-body>
-  <div class="row">
-    <div class="col-md-6 my-3">
+  <div class="row" *ngIf="ready; else loading">
+    <div class="col-md-4 my-3">
       <app-card [autoHeight]="false" [title]="'Think Together'">
         <p>
           Traps:
         </p>
         <p>
-          <button class="btn btn-secondary">Think Together</button>
-          <button class="btn btn-secondary">Orders</button>
-          <button class="btn btn-secondary">Anagrams</button>
+          <button class="btn btn-secondary" (click)="drawThink()">Think Together</button>
+          <button class="btn btn-secondary" (click)="drawOrders()">Orders</button>
+          <button class="btn btn-secondary" (click)="drawAnagrams()">Anagrams</button>
         </p>
         <hr />
         <p>
           Encounters:
         </p>
         <p>
-          <button class="btn btn-secondary">Hunter</button>
-          <button class="btn btn-secondary">Generator</button>
+          <button class="btn btn-secondary" (click)="drawHunter()">Hunter</button>
+          <button class="btn btn-secondary" (click)="drawGenerator()">Generator</button>
         </p>
       </app-card>
+    </div>
+    <div class="col-md-8 my-3">
+      <app-spectre-card [card]="selectedCard"></app-spectre-card>
     </div>
     <div class="col-md-6 my-3">
       <app-card [autoHeight]="false" [title]="'Think Together'">
@@ -99,7 +102,8 @@
     <div class="col-md-6 my-3">
       <app-card [autoHeight]="false" [title]="'Generator Encounter: Showdown'">
         <p>
-          The Spectre and Boss both create lists for a topic. Whoever writes the most words in 30 seconds wins. The Boss chooses the topic.
+          The Spectre and Boss both create lists for a topic. Whoever writes the
+          most words in 30 seconds wins. The Boss chooses the topic.
         </p>
         <hr />
         <h3>1. VALUE HERE</h3>
@@ -108,3 +112,11 @@
     </div>
   </div>
 </app-body>
+
+<ng-template #loading>
+  <div class="row">
+    <div class="col-md-12 my-3">
+      <app-loading></app-loading>
+    </div>
+  </div>
+</ng-template>

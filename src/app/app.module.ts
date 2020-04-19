@@ -25,6 +25,7 @@ import { CardTableComponent } from "./components/card-table/card-table.component
 import { CardOverviewComponent } from "./components/card-overview/card-overview.component";
 import { CardFormComponent } from "./components/card-form/card-form.component";
 import { CardDetailsComponent } from "./components/card-details/card-details.component";
+import { SpectreCardComponent } from './components/spectre-card/spectre-card.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { CardDetailsComponent } from "./components/card-details/card-details.com
     CardOverviewComponent,
     CardFormComponent,
     CardDetailsComponent,
+    SpectreCardComponent,
   ],
   imports: [
     BrowserModule,
