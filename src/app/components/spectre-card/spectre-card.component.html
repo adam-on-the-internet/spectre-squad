@@ -1,20 +1,70 @@
 <app-card *ngIf="cardSet">
-  {{ card | json }}
-  <hr />
   <div class="orders-rules" *ngIf="isOrders">
-    ORDERS RULES
+    <h1>Trap: Orders</h1>
+    <p>
+      Spectre draws, acts, or impersonates one of the choices.
+    </p>
+    <ul>
+      <li>
+        Level 1: ?
+      </li>
+      <li>
+        Level 2: ?
+      </li>
+      <li>
+        Level 3: ?
+      </li>
+    </ul>
   </div>
-  <div class="orders-rules" *ngIf="isThink">
-    THINK RULES
+  <div class="think-rules" *ngIf="isThink">
+    <h1>Trap: Think Together</h1>
+    <p>
+      Two Spectres each create a list of items for a topic.
+    </p>
+    <ul>
+      <li>
+        Level 1: ?
+      </li>
+      <li>
+        Level 2: ?
+      </li>
+      <li>
+        Level 3: ?
+      </li>
+    </ul>
   </div>
-  <div class="orders-rules" *ngIf="isAnagrams">
-    ANAGRAMS RULES
+  <div class="anagrams-rules" *ngIf="isAnagrams">
+    <h1>Trap: Anagrams</h1>
+    <p>
+      One Spectre writes down as many words as possible using the given
+      letters.
+    </p>
+    <ul>
+      <li>
+        Level 1: ?
+      </li>
+      <li>
+        Level 2: ?
+      </li>
+      <li>
+        Level 3: ?
+      </li>
+    </ul>
   </div>
-  <div class="orders-rules" *ngIf="isHunter">
-    HUNTER RULES
+  <div class="hunter-rules" *ngIf="isHunter">
+    <h1>Encounter: Hunter (Segue)</h1>
+    <p>
+      The active player selects the word or phrase from the two options. The
+      Spectre and Boss take turns saying words or phrases related to the
+      previous word or phrase.
+    </p>
   </div>
-  <div class="orders-rules" *ngIf="isGenerator">
-    GENERATOR RULES
+  <div class="generator-rules" *ngIf="isGenerator">
+    <h1>Encounter: Generator (Showdown)</h1>
+    <p>
+      The Spectre and Boss both create lists for a topic. Whoever writes the
+      most words in 30 seconds wins. The Boss chooses the topic.
+    </p>
   </div>
   <hr />
   <div class="one-option" *ngIf="hasOneOption">
