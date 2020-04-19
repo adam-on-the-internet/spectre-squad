@@ -1,7 +1,30 @@
 <app-card *ngIf="cardSet">
   {{ card | json }}
   <hr />
-  <div class="rules"></div>
+  <div class="orders-rules" *ngIf="isOrders">
+    ORDERS RULES
+  </div>
+  <div class="orders-rules" *ngIf="isThink">
+    THINK RULES
+  </div>
+  <div class="orders-rules" *ngIf="isAnagrams">
+    ANAGRAMS RULES
+  </div>
+  <div class="orders-rules" *ngIf="isHunter">
+    HUNTER RULES
+  </div>
+  <div class="orders-rules" *ngIf="isGenerator">
+    GENERATOR RULES
+  </div>
   <hr />
-  <div class="options"></div>
+  <div class="one-option" *ngIf="hasOneOption">
+    {{ card.valueOne }}
+  </div>
+  <div class="multiple-options" *ngIf="hasMultipleOptions">
+    <ol>
+      <li>{{ card.valueOne }}</li>
+      <li>{{ card.valueTwo }}</li>
+      <li *ngIf="hasThreeOptions">{{ card.valueThree }}</li>
+    </ol>
+  </div>
 </app-card>
