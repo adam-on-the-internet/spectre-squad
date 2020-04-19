@@ -1,9 +1,33 @@
-<app-header [title]="'Game Rules'"></app-header>
+<app-header [title]="'Deck Listing'"></app-header>
 <app-body>
   <div class="row">
     <div class="col-md-12 my-3" *ngIf="ready; else loading">
-      <app-card [autoHeight]="false">
-        {{ cards | json }}
+      <app-card [autoHeight]="false" [title]="'Deck Information'">
+        <hr />
+        <p>
+          <strong>Think Together Deck: </strong>
+          {{ decks.thinkDeck.length }} cards
+        </p>
+        <p>
+          <strong>Orders Deck: </strong>
+          {{ decks.ordersDeck.length }} cards
+        </p>
+        <p>
+          <strong>Anagrams Deck: </strong>
+          {{ decks.anagramsDeck.length }} cards
+        </p>
+        <p>
+          <strong>Hunter Deck: </strong>
+          {{ decks.hunterDeck.length }} cards
+        </p>
+        <p>
+          <strong>Generator Deck: </strong>
+          {{ decks.generatorDeck.length }} cards
+        </p>
+        <p>
+          <strong>Total: </strong>
+          {{ decks.allCards.length }} cards
+        </p>
       </app-card>
     </div>
   </div>

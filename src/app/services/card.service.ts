@@ -5,6 +5,7 @@ import { Card } from "../models/Card.model";
 import { CookieHelper } from "../utilities/cookie.util";
 import { ServiceUrl } from "../constants/rest.constants";
 import { RestUrlBuilder } from "../utilities/rest-url-builder.util";
+import { Decks } from "../models/Decks.model";
 
 const controller = "spectreCard";
 
@@ -40,6 +41,15 @@ export class CardService {
       controller
     });
     return this.http.get(url, CookieHelper.authHeaders) as Observable<Card[]>;
+  }
+
+  public getDecks(): Observable<Decks> {
+    const url = RestUrlBuilder.buildRestUrl({
+      service: ServiceUrl.BasicExpress,
+      controller,
+      collection: "decks"
+    });
+    return this.http.get(url, CookieHelper.authHeaders) as Observable<Decks>;
   }
 
   public getSingle(id: string): Observable<Card> {

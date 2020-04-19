@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { CardService } from "src/app/services/card.service";
-import { Card } from "src/app/models/Card.model";
 import { BooleanHelper } from "src/app/utilities/boolean.util";
+import { Decks } from "src/app/models/Decks.model";
 
 @Component({
   selector: "app-deck-listing",
@@ -9,11 +9,11 @@ import { BooleanHelper } from "src/app/utilities/boolean.util";
   styleUrls: ["./deck-listing.component.scss"]
 })
 export class DeckListingComponent implements OnInit {
-  public cards: Card[] = null;
+  public decks: Decks = null;
   public error = false;
 
   public get ready(): boolean {
-    return BooleanHelper.hasValue(this.cards);
+    return BooleanHelper.hasValue(this.decks);
   }
 
   constructor(
@@ -25,13 +25,13 @@ export class DeckListingComponent implements OnInit {
   }
 
   private load(): void {
-    this.cards = null;
+    this.decks = null;
     this.error = false;
-    this.cardService.getAll()
-      .subscribe((res) => this.cards = res,
+    this.cardService.getDecks()
+      .subscribe((res) => this.decks = res,
         (error) => {
           this.error = true;
-          console.log("get cards failed");
+          console.log("get decks failed");
         });
   }
 
